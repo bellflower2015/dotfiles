@@ -25,3 +25,5 @@ if $(type __git_ps1 &> /dev/null); then
 else
     export PS1='[\[\033[32m\]\u@\H \[\033[34m\]\w\[\033[00m\]]\$ '
 fi
+
+[ -f ~/.bashrc.local ] && . ~/.bashrc.local
