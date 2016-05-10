@@ -1,0 +1,7 @@
+call dein#add('tpope/vim-fugitive')
+call dein#add('itchyny/lightline.vim')
+call dein#add('scrooloose/syntastic')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('embear/vim-localvimrc')
+call dein#add('Chiel92/vim-autoformat')
+call dein#add('tomasr/molokai')
