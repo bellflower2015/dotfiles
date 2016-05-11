@@ -6,6 +6,9 @@ export LC_CTYPE=ja_JP.UTF-8
 export TERM=xterm-256color
 export EDITOR=vim
 export VISUAL=vim
+
+export PATH=$HOME/bin:$PATH
+
 unalias ls 2>/dev/null
 
 if [ "$(type gnuls 2>/dev/null)" ]; then
