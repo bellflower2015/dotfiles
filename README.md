@@ -3,7 +3,7 @@ bellflower's dotfiles
 
 ## usage
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/bellflower2015/dotfiles/master/bin/installer.sh)" && . ~/.bashrc
+bash -c "$(curl -fsSL http://git.io/bf-dotfiles)" && . ~/.bashrc
 ```
 
 ## requires
