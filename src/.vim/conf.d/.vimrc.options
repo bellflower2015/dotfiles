@@ -28,7 +28,7 @@ set showtabline=2
 set smarttab
 set t_Co=256
 set tabstop=4
-set whichwrap=b,s,h,s,<,>,[,]
+set whichwrap=b,s,h,l,<,>,[,],~
 set wildmenu
 set wildmode=list:full
 set nofixeol
