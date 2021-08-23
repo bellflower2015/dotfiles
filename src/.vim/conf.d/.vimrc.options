@@ -19,6 +19,7 @@ set laststatus=2
 set list
 set listchars=eol:↲,tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 set matchpairs+=<:>
+set modeline
 set number
 set scrolloff=999
 set shiftwidth=4
