@@ -20,12 +20,12 @@ for src in $dotpath/src/.??*; do
     ln -snfv $src $dst
 done
 
-if [ ! -f ~/.git-completion.bash ]; then
-    curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+if [ ! -f $dotpath/.git-completion.bash ]; then
+    curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o $dotpath/.git-completion.bash
 fi
 
-if [ ! -f ~/.git-prompt.sh ]; then
-    curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+if [ ! -f $dotpath/.git-prompt.sh ]; then
+    curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o $dotpath/.git-prompt.sh
 fi
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh)" -- ~/.vim

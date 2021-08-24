@@ -21,8 +21,8 @@ fi
 
 alias ll='ls -alF'
 
-[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
-[ -f ~/.git-prompt.sh ] && . ~/.git-prompt.sh
+[ -f ~/.dotfiles/.git-completion.bash ] && . ~/.dotfiles/.git-completion.bash
+[ -f ~/.dotfiles/.git-prompt.sh ] && . ~/.dotfiles/.git-prompt.sh
 
 if $(type __git_ps1 &> /dev/null); then
     export PS1='[\[\033[32m\]\u@\h \[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]]\$ '
