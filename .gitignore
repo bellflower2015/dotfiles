@@ -1,2 +1,4 @@
 /.git-completion.bash
 /.git-prompt.sh
+/src/.vim/.cache
+/src/.vim/repos

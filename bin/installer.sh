@@ -15,7 +15,6 @@ for src in $dotpath/src/.??*; do
     dotfile=${src#$dotpath/src/}
     dst=~/$dotfile
     rm -rf $dst
-    [ "$dotfile" = ".vim"        ] && cp -a $src $dst && continue
     [ "$dotfile" = ".vimrc.dein" ] && cp -a $src $dst && continue
     ln -snfv $src $dst
 done
