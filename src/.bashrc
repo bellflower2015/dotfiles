@@ -25,9 +25,9 @@ alias ll='ls -alF'
 [ -f ~/.git-prompt.sh ] && . ~/.git-prompt.sh
 
 if $(type __git_ps1 &> /dev/null); then
-    export PS1='[\[\033[32m\]\u@\H \[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]]\$ '
+    export PS1='[\[\033[32m\]\u@\h \[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]]\$ '
 else
-    export PS1='[\[\033[32m\]\u@\H \[\033[34m\]\w\[\033[00m\]]\$ '
+    export PS1='[\[\033[32m\]\u@\h \[\033[34m\]\w\[\033[00m\]]\$ '
 fi
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
