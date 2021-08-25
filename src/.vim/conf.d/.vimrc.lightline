@@ -13,19 +13,13 @@ let g:lightline = {
         \     ['filename'],
         \   ],
         \   'right': [
-        \     ['lineinfo', 'syntastic'],
+        \     ['lineinfo', 'ale'],
         \     ['percent'],
         \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
         \   ]
         \ },
         \ 'component': {
         \   'cwd': '%{fnamemodify(getcwd(), ":~")}'
-        \ },
-        \ 'component_expand': {
-        \   'syntastic': 'SyntasticStatuslineFlag'
-        \ },
-        \ 'component_type': {
-        \   'syntastic': 'error'
         \ },
         \ 'component_function': {
         \   'modified': 'MyModified',
@@ -38,28 +32,17 @@ let g:lightline = {
         \   'mode': 'MyMode',
         \   'charcode': 'MyCharCode',
         \   'gitgutter': 'MyGitGutter',
+        \   'ale': 'LLAle',
         \ },
         \ 'separator': {'left': '', 'right': ''},
         \ 'subseparator': {'left': '', 'right': ''}
         \ }
 
-let g:syntastic_mode_map = {'mode': 'passive'}
-let g:syntastic_check_on_open = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_echo_current_error = 1
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_enable_highlighting = 1
-let g:syntastic_php_php_args = '-l'
-
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.php,*.pl,*.pm call s:syntastic()
-augroup END
-
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-  Errors
+function! LLAle()
+  let l:count = ale#statusline#Count(bufnr(''))
+  let l:errors = l:count.error + l:count.style_error
+  let l:warnings = l:count.warning + l:count.style_warning
+  return l:count.total == 0 ? 'OK' : 'E:' . l:errors . ' W:' . l:warnings
 endfunction
 
 function! MyModified()

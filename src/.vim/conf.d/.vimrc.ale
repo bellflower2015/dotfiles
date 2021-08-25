@@ -1,0 +1,14 @@
+let g:ale_completion_enabled = 1
+let g:ale_sign_column_always = 1
+" linter
+let g:ale_linters = {
+\   'php': ['php -l']
+\}
+" phpcbf
+let g:ale_php_phpcbf_standard = 'PSR2'
+" phpcs
+let g:ale_php_phpcs_standard = 'PSR2'
+" fixer
+let g:ale_fixers = {
+\   'php': ['phpcbf']
+\}
