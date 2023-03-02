@@ -27,6 +27,6 @@ if [ ! -f $dotpath/.git-prompt.sh ]; then
     curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o $dotpath/.git-prompt.sh
 fi
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh)" -- ~/.vim
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein.vim/2.2/bin/installer.sh)" -- ~/.vim
 
 popd
